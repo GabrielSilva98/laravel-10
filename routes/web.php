@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Site\SiteController;
 
+Route::put('/supports/{id}', [SupportController::class, 'update'])->name('supports.update');
 Route::get('/support/{id}/edit', [SupportController::class, 'edit'])->name('supports.edit');
 Route::get('/supports/create', [SupportController::class, 'create'])->name('supports.create');
 Route::get('/supports/{id}', SupportController::class, 'show')->name('supports.show');
